@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bar.css" />
+    <script src="./js/bubble_selection.js" type="module"></script>
+    <title>バブルソート vs 選択ソート</title>
+  </head>
+  <body>
+    <div class="title_bar">
+      <span class="btn_page_back" onclick="window.history.back()"></span>
+      <span id="title">バブルソート vs 選択ソート</span>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="control top_round">
+          <span style="font-weight: 700;">バブルソート</span>
+        </div>
+        <div id="animation_bubble" class="animation" style="height: 26vh;">
+          読み込み中
+        </div>
+        <div class="control bottom_round">
+          <div class="row">
+            比較: <span id="compare_bubble">0</span> 回&emsp;交換: <span id="swap_bubble">0</span> 回
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="control top_round">
+          <span style="font-weight: 700;">選択ソート</span>
+        </div>
+        <div id="animation_selection" class="animation" style="height: 26vh;">
+          読み込み中
+        </div>
+        <div class="control bottom_round">
+          <div class="row">
+            比較: <span id="compare_selection">0</span> 回&emsp;交換: <span id="swap_selection">0</span> 回
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="control round">
+          <div class="row">
+            <input type="button" id="btn_begin" value="最初に戻す" title="最初に戻す" onclick="begin()" />
+            <input type="button" id="btn_play" value="▶" title="再生/停止する" onclick="play()" />
+            <label for="interval">スピード: </label><input type="range" id="interval" value="4" min="1" max="4" />
+          </div>
+          <div class="row">
+            <input type="text" id="my_input" placeholder="要素数を入力" size="12" list="input_example" value="7" />
+            <datalist id="input_example">
+              <option value="7"></option>
+              <option value="15"></option>
+              <option value="31"></option>
+              <option value="63"></option>
+            </datalist>
+            <input type="button" value="入力セット" title="入力をセットする" onclick="set()" />
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>
